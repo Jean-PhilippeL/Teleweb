@@ -1,0 +1,18 @@
+{
+  "generator-jhipster": {
+    "baseName": "teleweb",
+    "packageName": "com.jpl.teleweb",
+    "packageFolder": "com/jpl/teleweb",
+    "authenticationType": "cookie",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "nosql",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "7"
+  }
+}

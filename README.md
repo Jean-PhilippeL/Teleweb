@@ -1,4 +1,2 @@
-Teleweb
-=======
-
-Agrégation et publication de relevés télé-info
+README for teleweb
+==========================
