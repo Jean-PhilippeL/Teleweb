@@ -1,6 +1,10 @@
 package com.jpl.teleweb;
 
-import com.jpl.teleweb.config.Constants;
+import java.util.Arrays;
+
+import javax.annotation.PostConstruct;
+import javax.inject.Inject;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -11,10 +15,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.SimpleCommandLinePropertySource;
 
-import javax.annotation.PostConstruct;
-import javax.inject.Inject;
-import java.io.IOException;
-import java.util.Arrays;
+import com.jpl.teleweb.config.Constants;
 
 @ComponentScan
 @EnableAutoConfiguration(exclude = {MetricFilterAutoConfiguration.class, MetricRepositoryAutoConfiguration.class})
@@ -32,7 +33,7 @@ public class Application {
      * <p/>
      */
     @PostConstruct
-    public void initApplication() throws IOException {
+	public void initApplication() {
         if (env.getActiveProfiles().length == 0) {
             log.warn("No Spring profile configured, running with default configuration");
         } else {
